@@ -1,0 +1,29 @@
+"use strict";
+var combine = function (n1, n2) {
+    return n1 + n2;
+};
+var newResult = function (num) {
+    console.log('Result: ', +num);
+};
+var addAndHandle = function (n1, n2, cb) {
+    var result = n1 + n2;
+    cb(result);
+};
+newResult(combine(5, 12));
+var combineValues;
+combineValues = combine;
+// combineValues = printResult;
+// combineValues = 5;
+console.log(combineValues(8, 8));
+// let someValue: undefined;
+addAndHandle(10, 20, function (result) {
+    console.log(result);
+});
+// function sendRequest(data: string, cb: (response: any) => void) {
+//   // ... sending a request with "data"
+//   return cb({data: 'Hi there!'});
+// }
+// sendRequest('Send this!', (response) => {
+//   console.log(response);
+//   return true;
+//  });
